@@ -5,9 +5,9 @@
                          reb REAL,
                          weight INTEGER
                        );
- CREATE TYPE scoring_class AS
-     ENUM ('bad', 'average', 'good', 'star');
 
+ CREATE TYPE scoring_class AS
+     ENUM ('star', 'good', 'average', 'bad');
 
  CREATE TABLE players (
      player_name TEXT,
@@ -18,9 +18,10 @@
      draft_round TEXT,
      draft_number TEXT,
      seasons season_stats[],
-     scorer_class scoring_class,
-     is_active BOOLEAN,
+     scoring_class scoring_class,
+     years_since_last_season INTEGER,
      current_season INTEGER,
+     is_active BOOLEAN,
      PRIMARY KEY (player_name, current_season)
  );
 
