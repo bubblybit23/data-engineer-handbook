@@ -1,4 +1,4 @@
- CREATE TYPE season_stats AS (
+	 CREATE TYPE season_stats AS (
                          season Integer,
                          pts REAL,
                          ast REAL,
