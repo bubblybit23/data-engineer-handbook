@@ -4,7 +4,8 @@ create table players_scd
 (
 	player_name text,
 	scoring_class scoring_class,
-	is_active BOOLEAN,
+	is_active BOO
+	LEAN,
 	start_season INTEGER,
 	end_season INTEGER,
 	current_season INTEGER,
